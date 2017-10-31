@@ -17,3 +17,12 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+//Routes for products
+
+Route::get('products', 'ProductsController@getAll');
+
+Route::get('products/{product}', 'ProductsController@get');
+
+Route::post('products/{product}', 'ProductsController@store');
+
+
